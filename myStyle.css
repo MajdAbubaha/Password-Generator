@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.flex{
+    display: flex; /*main mainContainer passwordGenerator passwordGeneratorAtBottom*/
+}
+
+.inlineFlex{
+    display: inline-flex; /*password determineLength passwordStrengthLabel passwordStrengthContainer copyContainer*/
+}
+
+.alignCenter{
+    align-items: center; /*main password determineLength passwordStrengthLabel
+    passwordStrengthContainer copyContainer*/
+}
+
+.spaceBetween{ /*password determineLength passwordStrengthLabel*/
+    justify-content: space-between;
+}
+
+.fontStyle{
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: JetBrains Mono;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;  /*h1 h2 paragraph copyParagraph strengthParagraph passwordStrength button*/
+}
+
+.almost-white{ 
+    color: var(--almost-white, #E6E5EA); /*h2 paragraph passwordStrength*/
+}
+
+.main{
+    width: 100vw;
+    background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+    justify-content: center;
+}
+
+.mainContainer{
+    flex-direction: column;
+}
+
+.h1{
+    color: var(--grey, #817D92);
+    text-align: center;
+    /* Heading (M) */
+    font-size: 24px;
+}
+
+.h2{
+    /* Heading (L) */
+    font-size: 32px;
+    opacity: 0.25;
+}
+
+.paragraph{
+    /* Body (M) */
+    font-size: 18px;
+    margin: 0 32px;
+}
+
+.copyParagraph{
+    color:#24232C;
+    /* Body (M) */
+    font-size: 18px;
+}
+
+.strengthParagraph{
+    color: var(--grey, #817D92);
+    /* Body (M) */
+    font-size: 18px;
+    margin: 15px 32px;
+}
+
+.charLength{
+    color: var(--neon-green, #A4FFAF);
+    /* Heading (L) */
+    font-size: 32px;
+    margin: 0 32px 0 0;
+}
+
+.password{
+    background: var(--dark-grey, #24232C);
+    margin-bottom: 24px;
+    padding: 0 32px;
+    min-width: 476px; 
+    max-height: 80px;
+    min-height: 80px;
+}
+
+.passwordGenerator{
+    flex-direction: column;
+    background: var(--dark-grey, #24232C);  
+    justify-content: flex-start;
+}
+
+.passwordGeneratorAtBottom{
+    flex-direction: column;
+    position: relative;
+    background: var(--dark-grey, #24232C);  
+    justify-content: center;
+    padding: 32px;
+}
+
+.determineLength{
+    margin-top: 32px;
+
+}
+
+.passwordStrengthLabel{
+    flex-shrink: 0;
+    background: #18171F;
+    min-height: 72px;
+}
+
+.passwordStrengthContainer{
+    justify-content: flex-end;
+    margin-right: 32px;
+    margin-left: 32px;
+}
+
+.copyContainer{
+    justify-content: flex-end;
+    padding-left: 32px;
+}
+
+.passwordStrength{
+    text-align: right;
+    /* Heading (M) */
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.checkBox{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    margin:25px 32px 32px 32px;
+    border-radius: 0;
+    background: #18171F;
+
+}
+
+/*The rectangle behind the thumb*/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type=range]::-webkit-slider-runnable-track { 
+    height: 8px;
+    cursor: pointer;
+    background: #18171F;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    cursor: pointer;
+    background: #18171F;
+}
+
+input[type=range]::-webkit-slider-thumb { /*The circle*/
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.1s ease;
+    height: 28px;
+    width: 28px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    margin-top: -10px;
+} 
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: 0.1s ease;
+    height: 28px;
+    width: 28px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    margin-top: -10px;
+
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    background: #18171F;
+    border: 1px solid #A4FFAF;
+    transition: 0.1s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #18171F;
+    border: 1px solid #A4FFAF;
+    transition: 0.1s ease;
+}
+
+input[type="range"]::-moz-slider-thumb:active {
+    background: #18171F;
+    border: 1px solid #A4FFAF;
+    transition: 0.1s ease;
+}
+input[type="range"]::-moz-slider-thumb:hover {
+    background: #18171F;
+    border: 1px solid #A4FFAF;
+    transition: 0.1s ease;
+}
+
+.svgArrow{
+    width: 11.105px;
+    height: 12px;
+    fill: var(--dark-grey, #24232C);
+    margin-left: 24px;
+}
+
+.rectangle{
+    margin-left: 8px;
+    width: 10px;
+    height: 28px;
+    flex-shrink: 0;
+    border: 1px solid #FFFFFF;
+    background: #18171F
+}
+
+.button{
+    flex-shrink: 0;
+    display: inline-block;
+    background-color: var(--neon-green, #A4FFAF);
+    color: var(--dark-grey, #24232C);
+    text-align: center;
+    font-size: 18px;
+    margin: 32px 0 0;
+    padding: 15px;
+    cursor: pointer;
+
+}
+
+.button:focus{
+    background-color: var(--neon-green, #A4FFAF);
+    color: var(--dark-grey, #24232C);
+
+}
+
+.button:active{
+    background-color: #24232C;
+    color: var(--neon-green, #A4FFAF);
+    border: 1px solid #A4FFAF;  
+}
+
+button:focus path{ 
+    fill: #24232C;  
+}
+
+button:active path{ 
+    fill: #A4FFAF;  
+}
+
+
+/*Phone*/
+@media only screen and (max-width: 376px){
+    .main{
+        width: 100vw;
+        background: linear-gradient(180deg, #14131B 0%, #08070B 100%);
+        justify-content: center;
+    }
+    
+    .mainContainer{
+        flex-direction: column;
+        padding: 16px;
+    }
+    
+    .h1{
+        color: var(--grey, #817D92);
+        text-align: center;
+        /* Heading (M) */
+        font-size: 16px;
+    }
+    
+    .h2{
+        /* Heading (L) */
+        font-size: 24px;
+        opacity: 0.25;
+        word-wrap: break-word;
+    }
+    
+    .paragraph{
+        /* Body (M) */
+        font-size: 16px;
+        margin: 0 16px;
+    }
+    
+    .copyParagraph{
+        color:#24232C;
+        /* Body (M) */
+        font-size: 16px;
+    }
+    
+    .strengthParagraph{
+        color: var(--grey, #817D92);
+        font-size: 16px;
+        margin: 15px 0 16px 16px;
+    }
+    
+    .charLength{
+        color: var(--neon-green, #A4FFAF);
+        /* Heading (L) */
+        font-size: 24px;
+        margin: 0 16px 0 0;
+    }
+    
+    .password{
+        background: var(--dark-grey, #24232C);
+        margin-bottom: 24px;
+        padding: 0 16px;
+        min-width: 311px; 
+        max-height: 64px;
+        min-height: 64px;
+    }
+    
+    .passwordGenerator{
+        flex-direction: column;
+        background: var(--dark-grey, #24232C);  
+        justify-content: flex-start;
+    }
+    
+    .passwordGeneratorAtBottom{
+        flex-direction: column;
+        position: relative;
+        background: var(--dark-grey, #24232C);  
+        justify-content: center;
+        padding: 16px;
+    }
+    
+    .determineLength{
+        margin-top: 16px;
+    
+    }
+    
+    .passwordStrengthLabel{
+        flex-shrink: 0;
+        background: #18171F;
+        min-height: 56px;
+    }
+    
+    .passwordStrengthContainer{
+        justify-content: flex-end;
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+    
+    .copyContainer{
+        justify-content: flex-end;
+        padding-left: 16px;
+    }
+    
+    .passwordStrength{
+        text-align: right;
+        /* Heading (M) */
+        font-size: 18px;
+        margin-right: 5px;
+    }
+    
+    .checkBox{
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+    
+    
+    input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 8px;
+        margin:25px 16px 16px 16px;
+        border-radius: 0;
+    
+    }
+    
+    /*The rectangle behind the thumb*/
+    /***** Chrome, Safari, Opera, and Edge Chromium *****/
+    input[type=range]::-webkit-slider-runnable-track { 
+        height: 8px;
+        cursor: pointer;
+        background: #18171F;
+    }
+    
+    /******** Firefox ********/
+    input[type="range"]::-moz-range-track {
+        height: 8px;
+        cursor: pointer;
+        background: #18171F;
+    }
+    
+    input[type=range]::-webkit-slider-thumb { /*The circle*/
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        transition: 0.1s ease;
+        height: 28px;
+        width: 28px;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        margin-top: -10px;
+    } 
+    
+    input[type="range"]::-moz-range-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        transition: 0.1s ease;
+        height: 28px;
+        width: 28px;
+        border-radius: 15px;
+        background-color: #FFFFFF;
+        margin-top: -10px;
+   
+    }
+    
+    input[type="range"]:active::-webkit-slider-thumb {
+        background: #18171F;
+        border: 1px solid #A4FFAF;
+        transition: 0.1s ease;
+    }
+    input[type="range"]::-webkit-slider-thumb:hover {
+        background: #18171F;
+        border: 1px solid #A4FFAF;
+        transition: 0.1s ease;
+    }
+    
+    input[type="range"]::-moz-slider-thumb:active {
+        background: #18171F;
+        border: 1px solid #A4FFAF;
+        transition: 0.1s ease;
+    }
+    input[type="range"]::-moz-slider-thumb:hover {
+        background: #18171F;
+        border: 1px solid #A4FFAF;
+        transition: 0.1s ease;
+    }
+       
+    .rectangle{
+        margin-left: 8px;
+        width: 10px;
+        height: 28px;
+        flex-shrink: 0;
+        border: 1px solid #FFFFFF;
+        background: #18171F
+    }
+
+    .svgArrow{
+        width: 11.105px;
+        height: 12px;
+        fill: var(--dark-grey, #24232C);
+        margin-left: 16px;
+    }
+    
+    .button{
+        flex-shrink: 0;
+        display: inline-block;
+        background-color: var(--neon-green, #A4FFAF);
+        color: var(--dark-grey, #24232C);
+        text-align: center;
+        font-size: 16px;
+        margin: 16px 0 0;
+        padding: 15px;
+        cursor: pointer;
+
+    }
+    
+    .button:focus{
+        background-color: var(--neon-green, #A4FFAF);
+        color: var(--dark-grey, #24232C);
+    }
+    
+    .button:active{
+        background-color: #24232C;
+        color: var(--neon-green, #A4FFAF);
+        border: 1px solid #A4FFAF;    
+    }
+
+    button:focus path{ 
+        fill: #24232C;  
+    }
+    
+    button:active path{ 
+        fill: #A4FFAF;  
+    }
+    
+}
+
